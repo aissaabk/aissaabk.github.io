@@ -4,7 +4,12 @@
 <title>Team devbelmel</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("bar.html"); 
+    });
+    </script> 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +26,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </head>
 <body class="w3-black">
 <header>
-  <div w3-include-html="bar.html"></div>
+   <div id="includedContent"></div>
 </header>
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
