@@ -9,3 +9,6 @@
     width: 0.5rem;
     height: 100vh;
 }
+.col-md-4 {
+  border-right: 1px dashed #333;
+}
