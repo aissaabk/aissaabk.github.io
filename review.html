@@ -53,8 +53,8 @@
         </section>
     </div>
 
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2024 Your App Name. All rights reserved.</p>
+    <footer class="bg-light text-center py-3" id="footer">
+        <!-- footer include file -->
     </footer>
 
     <!-- Bootstrap JS and Popper.js -->
@@ -65,6 +65,7 @@
        <script>
         $(document).ready(function () {
             $("#content").load("bar.html");
+            $("#footer").load("footer.html");
         });
     </script>
 </body>
