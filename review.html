@@ -18,6 +18,14 @@
       <!-- navbar includ from other html file using script jquery and id=content -->
 
     </header>
+    <div class="container text-center">
+  <div class="row">
+    <div class="col" id="sidebar">
+   <!--   slidebare-->
+    </div>
+    <div class="col-6">
+    <!--  container main-->
+   
 <div class="bg-primary text-white text-center py-5">
       
         <h1 class="display-4">Your Android App Name</h1>
@@ -96,7 +104,11 @@
             </ul>
         </section>
     </div>
-
+ </div>
+    <div class="col">
+  <!--    left container-->
+    </div>
+  </div>
     <footer class="bg-light text-center py-3" id="footer">
         <!-- footer include file -->
     </footer>
@@ -110,6 +122,8 @@
         $(document).ready(function () {
             $("#content").load("bar.html");
             $("#footer").load("footer.html");
+            $("#sidebar").load("sidebar.html");
+            
         });
     </script>
 </body>
