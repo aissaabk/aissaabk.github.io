@@ -105,6 +105,57 @@
         </section>
     </div>
  </div>
+      <div class="dark bg-black rounded-md"><div class="flex items-center relative text-token-text-secondary bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CustomAdapter</span>(<span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> objects: List&lt;Any&gt;) : RecyclerView.Adapter&lt;RecyclerView.ViewHolder&gt;() {
+
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span> {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">val</span> VIEW_TYPE_OBJECT1 = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">val</span> VIEW_TYPE_OBJECT2 = <span class="hljs-number">1</span>
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateViewHolder</span><span class="hljs-params">(parent: <span class="hljs-type">ViewGroup</span>, viewType: <span class="hljs-type">Int</span>)</span></span>: RecyclerView.ViewHolder {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">when</span> (viewType) {
+            VIEW_TYPE_OBJECT1 -&gt; Object1ViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.item_object1, parent, <span class="hljs-literal">false</span>)
+            )
+            VIEW_TYPE_OBJECT2 -&gt; Object2ViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.item_object2, parent, <span class="hljs-literal">false</span>)
+            )
+            <span class="hljs-keyword">else</span> -&gt; <span class="hljs-keyword">throw</span> IllegalArgumentException(<span class="hljs-string">"Invalid view type"</span>)
+        }
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onBindViewHolder</span><span class="hljs-params">(holder: <span class="hljs-type">RecyclerView</span>.<span class="hljs-type">ViewHolder</span>, position: <span class="hljs-type">Int</span>)</span></span> {
+        <span class="hljs-keyword">when</span> (holder) {
+            <span class="hljs-keyword">is</span> Object1ViewHolder -&gt; {
+                <span class="hljs-keyword">val</span> object1 = objects[position] <span class="hljs-keyword">as</span> Object1
+                <span class="hljs-comment">// Bind data for Object1</span>
+            }
+            <span class="hljs-keyword">is</span> Object2ViewHolder -&gt; {
+                <span class="hljs-keyword">val</span> object2 = objects[position] <span class="hljs-keyword">as</span> Object2
+                <span class="hljs-comment">// Bind data for Object2</span>
+            }
+        }
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>: <span class="hljs-built_in">Int</span> = objects.size
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getItemViewType</span><span class="hljs-params">(position: <span class="hljs-type">Int</span>)</span></span>: <span class="hljs-built_in">Int</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">when</span> (objects[position]) {
+            <span class="hljs-keyword">is</span> Object1 -&gt; VIEW_TYPE_OBJECT1
+            <span class="hljs-keyword">is</span> Object2 -&gt; VIEW_TYPE_OBJECT2
+            <span class="hljs-keyword">else</span> -&gt; <span class="hljs-keyword">throw</span> IllegalArgumentException(<span class="hljs-string">"Invalid object type"</span>)
+        }
+    }
+
+    <span class="hljs-keyword">inner</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Object1ViewHolder</span>(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        <span class="hljs-comment">// Bind views for Object1</span>
+    }
+
+    <span class="hljs-keyword">inner</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Object2ViewHolder</span>(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        <span class="hljs-comment">// Bind views for Object2</span>
+    }
+}
+</code></div></div>
     <div class="col-sm-2"> 
   <!--    left container-->
       
