@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع بورتفوليو احترافي | NextLevelDev</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .project-title {
+            font-size: 3rem;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        
+        .project-category {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #2563eb;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .project-preview {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .project-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .project-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .info-card h3 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card h3 i {
+            color: #2563eb;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tech-tag {
+            background: #f1f5f9;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-list li i {
+            color: #10b981;
+        }
+        
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .project-cta {
+            text-align: center;
+            margin-top: 80px;
+            padding: 50px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            border-radius: 20px;
+        }
+        
+        .project-cta h2 {
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+        
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2.2rem;
+            }
+            
+            .project-navigation {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="scroll-progress"></div>
+    
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- زر تبديل اللغة -->
+    <div class="lang-selector">
+        <button onclick="setLanguage('ar')">العربية</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
+    
+    <!-- محتوى المشروع -->
+    <div class="project-container">
+        <!-- عنوان المشروع -->
+        <div class="project-header">
+            <span class="project-category">تصميم ويب</span>
+            <h1 class="project-title">موقع بورتفوليو احترافي</h1>
+        </div>
+        
+        <!-- معاينة المشروع -->
+        <div class="project-preview">
+            <img src="../img/project1-preview.jpg" alt="معاينة موقع البورتفوليو">
+        </div>
+        
+        <!-- معلومات المشروع -->
+        <div class="project-info-grid">
+            <!-- المعلومات الأساسية -->
+            <div class="info-card">
+                <h3><i class="fas fa-info-circle"></i> معلومات المشروع</h3>
+                <p><strong>النوع:</strong> موقع بورتفوليو شخصي</p>
+                <p><strong>العميل:</strong> مصمم مستقل</p>
+                <p><strong>المدة:</strong> 3 أسابيع</p>
+                <p><strong>الحالة:</strong> مكتمل</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Bootstrap</span>
+                </div>
+            </div>
+            
+            <!-- الميزات -->
+            <div class="info-card">
+                <h3><i class="fas fa-star"></i> الميزات الرئيسية</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> تصميم متجاوب</li>
+                    <li><i class="fas fa-check"></i> معرض أعمال تفاعلي</li>
+                    <li><i class="fas fa-check"></i> نموذج اتصل بنا</li>
+                    <li><i class="fas fa-check"></i> تحسين SEO</li>
+                    <li><i class="fas fa-check"></i> سرعة تحميل عالية</li>
+                </ul>
+            </div>
+            
+            <!-- النتيجة -->
+            <div class="info-card">
+                <h3><i class="fas fa-trophy"></i> النتيجة</h3>
+                <p>زادت استفسارات العميل بنسبة 40% بعد إطلاق الموقع</p>
+                <p>سرعة تحميل أقل من 2 ثانية</p>
+                <p>دعم كامل للهواتف الذكية</p>
+                <p>تصميم فريد يعكس شخصية العميل</p>
+            </div>
+        </div>
+        
+        <!-- التحديات والحلول -->
+        <div class="info-card">
+            <h3><i class="fas fa-lightbulb"></i> التحديات والحلول</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+                <div>
+                    <h4 style="color: #dc2626; margin-bottom: 10px;">التحديات</h4>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-exclamation-triangle"></i> تحميل الصور الثقيلة</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> توافق المتصفحات</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> تجربة المستخدم</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #10b981; margin-bottom: 10px;">الحلول</h4>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> ضغط الصور الذكي</li>
+                        <li><i class="fas fa-check-circle"></i> اختبار متعدد المتصفحات</li>
+                        <li><i class="fas fa-check-circle"></i> تصميم يسهل التنقل</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- التنقل بين المشاريع -->
+        <div class="project-navigation">
+            <a href="../index.html" class="nav-btn">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </a>
+            <a href="project2.html" class="nav-btn">
+                المشروع التالي <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        
+        <!-- دعوة للعمل -->
+        <div class="project-cta">
+            <h2>هل تريد موقعاً مشابهاً؟</h2>
+            <p style="margin-bottom: 30px; color: #475569;">
+                يمكنني إنشاء موقع بورتفوليو مخصص يعكس شخصيتك ومهاراتك
+            </p>
+            <a href="../index.html#contact" class="nav-btn">
+                <i class="fas fa-envelope"></i> تواصل معي الآن
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/script.js"></script>
+    <script>
+        // دعم اللغة البسيط
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-ar]');
+            elements.forEach(el => {
+                if (el.tagName === 'IMG' && el.hasAttribute('alt')) {
+                    el.alt = el.getAttribute(`data-${lang}`) || el.alt;
+                } else if (el.hasAttribute(`data-${lang}`)) {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
