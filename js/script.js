@@ -1,37 +1,46 @@
-// Smooth animations عند التمرير
-const sections = document.querySelectorAll("section");
-const heroTitle = document.querySelector(".hero h1");
-const heroText = document.querySelector(".hero p");
+// ===== Language Switcher =====
+function setLanguage(lang){
+    const elements = document.querySelectorAll('[data-ar]');
+    elements.forEach(el => {
+        if(lang==='ar') el.textContent = el.getAttribute('data-ar');
+        if(lang==='en') el.textContent = el.getAttribute('data-en');
+        if(lang==='fr') el.textContent = el.getAttribute('data-fr');
+    });
 
-// إظهار Hero عند تحميل الصفحة
-window.addEventListener("load", () => {
-    heroTitle.style.opacity = 1;
-    heroTitle.style.transform = "translateY(0)";
-    heroText.style.opacity = 1;
-    heroText.style.transform = "translateY(0)";
+    // تغيير اتجاه النصوص
+    if(lang==='ar') document.documentElement.dir='rtl';
+    else document.documentElement.dir='ltr';
+}
+
+// افتراضي العربية
+setLanguage('ar');
+
+// ===== Scroll Animations =====
+const sections = document.querySelectorAll('section');
+const heroTitle = document.querySelector('.hero h1');
+const heroText = document.querySelector('.hero p');
+
+window.addEventListener('load', () => {
+    heroTitle.style.opacity=1;
+    heroTitle.style.transform="translateY(0)";
+    heroText.style.opacity=1;
+    heroText.style.transform="translateY(0)";
 });
 
-// Intersection Observer لإظهار الأقسام عند التمرير
-const observerOptions = {
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
         if(entry.isIntersecting){
-            entry.target.classList.add("section-visible");
+            entry.target.classList.add('section-visible');
         }
     });
-}, observerOptions);
+},{threshold:0.1});
 
 sections.forEach(section => observer.observe(section));
 
 // Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e){
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click', function(e){
         e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
     });
 });
