@@ -1,95 +1,175 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أبو خديجة - البورتفوليو</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أبو خديجة - البورتفوليو</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- ======= Hero Section ======= -->
+<!-- ===== Language Selector ===== -->
+<div class="lang-selector">
+    <button onclick="setLanguage('ar')">العربية</button>
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('fr')">Français</button>
+</div>
+
+<!-- ===== Hero Section ===== -->
 <section id="home" class="hero">
     <div class="container">
-        <h1>أبو خديجة</h1>
-        <p>مطور ويب | مصمم واجهات | حلول برمجية متكاملة</p>
-        <a href="#contact" class="btn">تواصل معي</a>
+        <img src="img/profile.jpg" alt="Profile" class="profile-img">
+        <h1 data-ar="أبو خديجة" data-en="Abou Khadija" data-fr="Abou Khadija">أبو خديجة</h1>
+        <p data-ar="مطور ويب | مصمم واجهات | حلول برمجية متكاملة"
+           data-en="Web Developer | UI Designer | Complete Software Solutions"
+           data-fr="Développeur Web | Designer UI | Solutions complètes">
+           مطور ويب | مصمم واجهات | حلول برمجية متكاملة
+        </p>
+        <a href="#contact" class="btn"
+           data-ar="تواصل معي" data-en="Contact Me" data-fr="Contactez-moi">تواصل معي</a>
     </div>
 </section>
 
-<!-- ======= About Section ======= -->
+<!-- ===== About Section ===== -->
 <section id="about">
     <div class="container">
-        <h2>من أنا</h2>
-        <p>أنا أبو خديجة، أعمل على تطوير المواقع وحلول البرمجة، وأسعى لتقديم خدمات مبتكرة تلبي احتياجات عملائي.</p>
+        <h2 data-ar="من أنا" data-en="About Me" data-fr="À propos de moi">من أنا</h2>
+        <p data-ar="أنا أبو خديجة، أعمل على تطوير المواقع وتطبيقات سطح المكتب، وأقدّم حلول ذكاء اصطناعي مبتكرة وتطوير إدارة Excel."
+           data-en="I'm Abou Khadija, developing websites, desktop apps, AI solutions, and Excel management systems."
+           data-fr="Je suis Abou Khadija, je développe des sites Web, des applications de bureau, des solutions IA et des systèmes de gestion Excel.">
+           أنا أبو خديجة، أعمل على تطوير المواقع وتطبيقات سطح المكتب، وأقدّم حلول ذكاء اصطناعي مبتكرة وتطوير إدارة Excel.
+        </p>
     </div>
 </section>
 
-<!-- ======= Services Section ======= -->
+<!-- ===== Services Section ===== -->
 <section id="services">
     <div class="container">
-        <h2>خدماتي</h2>
+        <h2 data-ar="خدماتي" data-en="My Services" data-fr="Mes services">خدماتي</h2>
         <div class="services-grid">
             <div class="service">
-                <h3>تطوير مواقع ويب</h3>
-                <p>تصميم وبرمجة مواقع ويب متكاملة ومتجاوبة لجميع الأجهزة.</p>
+                <img src="img/icons/web.png" alt="Web Development">
+                <h3 data-ar="تطوير مواقع ويب" data-en="Web Development" data-fr="Développement Web">تطوير مواقع ويب</h3>
+                <p data-ar="تصميم وبرمجة مواقع متجاوبة وسريعة."
+                   data-en="Responsive and fast website design & development."
+                   data-fr="Conception et développement de sites Web rapides et responsives.">
+                   تصميم وبرمجة مواقع متجاوبة وسريعة.
+                </p>
             </div>
             <div class="service">
-                <h3>تطبيقات سطح المكتب</h3>
-                <p>برمجة تطبيقات سطح المكتب باستخدام C#, Java, Python.</p>
+                <img src="img/icons/desktop.png" alt="Desktop Apps">
+                <h3 data-ar="تطبيقات سطح المكتب" data-en="Desktop Apps" data-fr="Applications de bureau">تطبيقات سطح المكتب</h3>
+                <p data-ar="تطوير تطبيقات سطح المكتب باستخدام C#, Java, Python."
+                   data-en="Desktop apps development using C#, Java, Python."
+                   data-fr="Développement d'applications de bureau avec C#, Java, Python.">
+                   تطوير تطبيقات سطح المكتب باستخدام C#, Java, Python.
+                </p>
             </div>
             <div class="service">
-                <h3>حلول ذكاء اصطناعي</h3>
-                <p>تطوير حلول ذكية لمعالجة البيانات واتخاذ القرارات.</p>
+                <img src="img/icons/ai.png" alt="AI Solutions">
+                <h3 data-ar="حلول ذكاء اصطناعي" data-en="AI Solutions" data-fr="Solutions IA">حلول ذكاء اصطناعي</h3>
+                <p data-ar="تطوير أنظمة ذكية لمعالجة البيانات واتخاذ القرارات."
+                   data-en="Develop intelligent systems for data analysis and decision making."
+                   data-fr="Développement de systèmes intelligents pour l'analyse de données et la prise de décision.">
+                   تطوير أنظمة ذكية لمعالجة البيانات واتخاذ القرارات.
+                </p>
+            </div>
+            <div class="service">
+                <img src="img/icons/excel.png" alt="Excel Management">
+                <h3 data-ar="إدارة Excel" data-en="Excel Management" data-fr="Gestion Excel">إدارة Excel</h3>
+                <p data-ar="تصميم نماذج، جداول وتحليل البيانات باستخدام Excel."
+                   data-en="Design templates, spreadsheets and data analysis with Excel."
+                   data-fr="Conception de modèles, tableaux et analyse de données avec Excel.">
+                   تصميم نماذج، جداول وتحليل البيانات باستخدام Excel.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ======= Portfolio Section ======= -->
-<section id="portfolio">
-    <div class="container">
-        <h2>مشاريعي</h2>
-        <div class="projects-grid">
-            <div class="project">
-                <img src="img/project1.jpg" alt="مشروع 1">
-                <h3>مشروع ويب تجريبي</h3>
-                <p>موقع للتجارة الإلكترونية باستخدام HTML, CSS, JS.</p>
-            </div>
-            <div class="project">
-                <img src="img/project2.jpg" alt="مشروع 2">
-                <h3>تطبيق إدارة الموظفين</h3>
-                <p>تطبيق سطح المكتب لإدارة الموارد البشرية باستخدام C#.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ======= Skills Section ======= -->
+<!-- ===== Skills Section ===== -->
 <section id="skills">
     <div class="container">
-        <h2>مهاراتي</h2>
+        <h2 data-ar="مهاراتي" data-en="My Skills" data-fr="Mes compétences">مهاراتي</h2>
         <div class="skills-grid">
             <div class="skill">HTML & CSS</div>
             <div class="skill">JavaScript</div>
             <div class="skill">Java</div>
             <div class="skill">C#</div>
             <div class="skill">Python</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">SQL & Databases</div>
+            <div class="skill">Excel Advanced</div>
         </div>
     </div>
 </section>
 
-<!-- ======= Contact Section ======= -->
+<!-- ===== Portfolio Section ===== -->
+<section id="portfolio">
+    <div class="container">
+        <h2 data-ar="مشاريعي" data-en="My Projects" data-fr="Mes projets">مشاريعي</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <a href="projects/project1.html">
+                    <img src="img/project1.jpg" alt="Project 1">
+                    <h3 data-ar="موقع تجارة إلكترونية" data-en="E-commerce Website" data-fr="Site E-commerce">موقع تجارة إلكترونية</h3>
+                    <p data-ar="HTML, CSS, JS" data-en="HTML, CSS, JS" data-fr="HTML, CSS, JS">HTML, CSS, JS</p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="projects/project2.html">
+                    <img src="img/project2.jpg" alt="Project 2">
+                    <h3 data-ar="تطبيق إدارة الموظفين" data-en="Employee Management App" data-fr="Application de gestion des employés">تطبيق إدارة الموظفين</h3>
+                    <p data-ar="C#, WPF, SQL" data-en="C#, WPF, SQL" data-fr="C#, WPF, SQL">C#, WPF, SQL</p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="projects/project3.html">
+                    <img src="img/project3.jpg" alt="Project 3">
+                    <h3 data-ar="نظام ذكاء اصطناعي" data-en="AI System" data-fr="Système IA">نظام ذكاء اصطناعي</h3>
+                    <p data-ar="Python, Machine Learning" data-en="Python, Machine Learning" data-fr="Python, Machine Learning">Python, Machine Learning</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Reviews Section ===== -->
+<section id="reviews">
+    <div class="container">
+        <h2 data-ar="آراء العملاء" data-en="Customer Reviews" data-fr="Avis des clients">آراء العملاء</h2>
+        <div class="reviews-grid">
+            <div class="review">
+                <p data-ar='"خدمة ممتازة!"' data-en='"Excellent service!"' data-fr='"Service excellent!"'>خدمة ممتازة!</p>
+                <h4>أحمد بن سعيد</h4>
+            </div>
+            <div class="review">
+                <p data-ar='"التواصل كان رائعاً."' data-en='"Communication was great."' data-fr='"La communication était excellente."'>التواصل كان رائعاً.</p>
+                <h4>ليلى الزهري</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Contact Section ===== -->
 <section id="contact">
     <div class="container">
-        <h2>تواصل معي</h2>
+        <h2 data-ar="تواصل معي" data-en="Contact Me" data-fr="Contactez-moi">تواصل معي</h2>
         <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="اسمك" required>
-            <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
-            <textarea name="message" placeholder="رسالتك" required></textarea>
-            <button type="submit">إرسال</button>
+            <input type="text" name="name" placeholder="اسمك" required
+                   data-ar="اسمك" data-en="Your Name" data-fr="Votre nom">
+            <input type="email" name="email" placeholder="بريدك الإلكتروني" required
+                   data-ar="بريدك الإلكتروني" data-en="Your Email" data-fr="Votre Email">
+            <textarea name="message" placeholder="رسالتك" required
+                      data-ar="رسالتك" data-en="Your Message" data-fr="Votre message"></textarea>
+            <button type="submit" data-ar="إرسال" data-en="Send" data-fr="Envoyer">إرسال</button>
         </form>
-        <p>أو عبر: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <div class="socials">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
     </div>
 </section>
 
