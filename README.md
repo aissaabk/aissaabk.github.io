@@ -12,10 +12,12 @@
 │  ├─ data/projects.js            قائمة المشاريع (هنا تضيف مشروعًا جديدًا)
 │  ├─ components/                 Header, Footer, ProjectCard, Icon, PlatformBadges
 │  ├─ pages/                      Home, ProjectDetail, Privacy, About, NotFound
+│  ├─ i18n/                       اللغات (عربي/إنجليزي/صيني)
 │  ├─ utils/privacy.js            مولّد سياسة الخصوصية (عربي/إنجليزي)
 │  ├─ styles/index.css
 │  ├─ App.jsx                     المسارات
 │  └─ main.jsx
+├─ vite-plugins/staticPolicies.js  يولّد صفحات سياسة ثابتة بثلاث لغات عند البناء
 ├─ index.html · vite.config.js · package.json
 ```
 
@@ -39,3 +41,12 @@ npm run build    # بناء في مجلد dist
 
 - التفاصيل: `/#/app/<k>`
 - الخصوصية: `/#/privacy/<k>` ← هذا الرابط تضعه في Google Play.
+
+## روابط سياسات الخصوصية القديمة
+
+اكتب المسارات القديمة في `src/data/legacyLinks.js`؛ يولّد البناء صفحة سياسة ثابتة (ثلاث لغات) على كل مسار بالضبط.
+كذلك تُولَّد لكل تطبيق صفحة ثابتة على `/policy/<k>.html`.
+
+## اللغات
+
+`?lang=ar|en|zh` في رابط الصفحة يفرض اللغة، مثال: `/#/privacy/universalprint?lang=zh`.

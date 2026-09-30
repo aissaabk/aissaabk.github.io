@@ -1,26 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getProject } from "../data/projects.js";
 import { buildPolicy } from "../utils/privacy.js";
 import { CONFIG } from "../config.js";
+import { LANGS } from "../i18n/strings.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
 import NotFound from "./NotFound.jsx";
 
 export default function Privacy() {
   const { id } = useParams();
+  const { lang, t } = useI18n();
   const p = getProject(id);
-  const [lang, setLang] = useState("ar");
-  useEffect(() => { if (p) document.title = `سياسة الخصوصية - ${p.n}`; }, [p]);
+  useEffect(() => { if (p) document.title = t("t_pol", { n: p.n }); }, [p, lang]);
   if (!p) return <NotFound />;
 
   const doc = buildPolicy(p, lang);
   return (
     <>
-      <div className="crumb"><Link to={`/app/${p.k}`}>← {p.n}</Link></div>
-      <div className="langs">
-        <button className="chip" aria-pressed={lang === "ar"} onClick={() => setLang("ar")}>العربية</button>
-        <button className="chip" aria-pressed={lang === "en"} onClick={() => setLang("en")}>English</button>
-      </div>
-      <article className="policy" dir={lang === "ar" ? "rtl" : "ltr"} lang={lang}>
+      <div className="crumb"><Link to={`/app/${p.k}`}>{LANGS[lang].dir === "rtl" ? "←" : "→"} {p.n}</Link></div>
+      <article className="policy" dir={LANGS[lang].dir} lang={lang}>
         <h1>{doc.title}</h1>
         <p>{doc.meta}</p>
         {doc.sections.map((s) => (
