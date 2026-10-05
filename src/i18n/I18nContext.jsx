@@ -3,26 +3,77 @@ import { useSearchParams } from "react-router-dom";
 import { LANGS, STR } from "./strings.js";
 
 const Ctx = createContext(null);
-const stored = () => { try { return localStorage.getItem("lang"); } catch { return null; } };
+
+function getStoredLanguage() {
+  try {
+    const value = localStorage.getItem("lang");
+    return LANGS[value] ? value : null;
+  } catch {
+    return null;
+  }
+}
 
 export function I18nProvider({ children }) {
   const [sp, setSp] = useSearchParams();
-  const q = sp.get("lang"); // مثال: /#/privacy/app?lang=zh
-  const [lang, setL] = useState(LANGS[q] ? q : LANGS[stored()] ? stored() : "en");
 
-  useEffect(() => { if (LANGS[q]) setL(q); }, [q]);
+  const queryLanguage = sp.get("lang");
+  const storedLanguage = getStoredLanguage();
+
+  const initialLanguage =
+    LANGS[queryLanguage]
+      ? queryLanguage
+      : storedLanguage || "en";
+
+  const [lang, setL] = useState(initialLanguage);
+
   useEffect(() => {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = LANGS[lang].dir;
+    if (LANGS[queryLanguage]) {
+      setL(queryLanguage);
+    }
+  }, [queryLanguage]);
+
+  useEffect(() => {
+    const language = LANGS[lang] ? lang : "en";
+
+    document.documentElement.lang = language;
+    document.documentElement.dir = LANGS[language].dir;
   }, [lang]);
 
-  const setLang = (l) => {
-    setL(l);
-    try { localStorage.setItem("lang", l); } catch { /* ignore */ }
-    if (q) { const n = new URLSearchParams(sp); n.set("lang", l); setSp(n, { replace: true }); }
+  const setLang = (language) => {
+    if (!LANGS[language]) return;
+
+    setL(language);
+
+    try {
+      localStorage.setItem("lang", language);
+    } catch {
+      // Ignore storage errors
+    }
+
+    if (queryLanguage) {
+      const params = new URLSearchParams(sp);
+      params.set("lang", language);
+      setSp(params, { replace: true });
+    }
   };
-  const t = (k, vars = {}) => (STR[lang][k] ?? k).replace(/\{(\w+)\}/g, (_, v) => vars[v] ?? "");
-  return <Ctx.Provider value={{ lang, setLang, t }}>{children}</Ctx.Provider>;
+
+  const t = (key, vars = {}) => {
+    const value =
+      STR[lang]?.[key] ??
+      STR.en?.[key] ??
+      key;
+
+    return value.replace(
+      /\{(\w+)\}/g,
+      (_, variable) => vars[variable] ?? ""
+    );
+  };
+
+  return (
+    <Ctx.Provider value={{ lang, setLang, t }}>
+      {children}
+    </Ctx.Provider>
+  );
 }
 
 export const useI18n = () => useContext(Ctx);
