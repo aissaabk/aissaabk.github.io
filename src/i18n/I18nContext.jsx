@@ -8,7 +8,7 @@ const stored = () => { try { return localStorage.getItem("lang"); } catch { retu
 export function I18nProvider({ children }) {
   const [sp, setSp] = useSearchParams();
   const q = sp.get("lang"); // مثال: /#/privacy/app?lang=zh
-  const [lang, setL] = useState(LANGS[q] ? q : LANGS[stored()] ? stored() : "ar");
+  const [lang, setL] = useState(LANGS[q] ? q : LANGS[stored()] ? stored() : "en");
 
   useEffect(() => { if (LANGS[q]) setL(q); }, [q]);
   useEffect(() => {

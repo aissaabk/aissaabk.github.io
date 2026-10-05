@@ -1,12 +1,5 @@
 
 ================================================================================
-FILE: README.md
-================================================================================
-# aissaabk.github.io
-Portfolio
-
-
-================================================================================
 FILE: about.html
 ================================================================================
 <!doctype html>
@@ -326,181 +319,19 @@ FILE: index.html
 ================================================================================
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NextLevelDev - البورتفوليو</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
-<!-- ===== Language Selector ===== -->
-<div class="lang-selector">
-    <button onclick="setLanguage('ar')">العربية</button>
-    <button onclick="setLanguage('en')">English</button>
-    <button onclick="setLanguage('fr')">Français</button>
-</div>
-
-<!-- ===== Hero Section ===== -->
-<section id="home" class="hero">
-    <div class="container">
-        <img src="img/profile.jpg" alt="Profile" class="profile-img">
-        <h1 data-ar="NextLevelDev" data-en="NextLevelDev" data-fr="NextLevelDev">NextLevelDev</h1>
-        <p data-ar="مطور ويب | مصمم واجهات | حلول برمجية متكاملة"
-           data-en="Web Developer | UI Designer | Complete Software Solutions"
-           data-fr="Développeur Web | Designer UI | Solutions complètes">
-           مطور ويب | مصمم واجهات | حلول برمجية متكاملة
-        </p>
-        <a href="#contact" class="btn"
-           data-ar="تواصل معي" data-en="Contact Me" data-fr="Contactez-moi">تواصل معي</a>
-    </div>
-</section>
-
-<!-- ===== About Section ===== -->
-<section id="about">
-    <div class="container">
-        <h2 data-ar="من أنا" data-en="About Me" data-fr="À propos de moi">من أنا</h2>
-        <p data-ar="أنا NextLevelDev، أعمل على تطوير المواقع، تطبيقات سطح المكتب، حلول ذكاء اصطناعي، وإدارة Excel."
-           data-en="I am NextLevelDev, developing websites, desktop apps, AI solutions, and Excel management."
-           data-fr="Je suis NextLevelDev, je développe des sites Web, applications de bureau, solutions IA et gestion Excel.">
-           أنا NextLevelDev، أعمل على تطوير المواقع، تطبيقات سطح المكتب، حلول ذكاء اصطناعي، وإدارة Excel.
-        </p>
-    </div>
-</section>
-
-<!-- ===== Services Section ===== -->
-<section id="services">
-    <div class="container">
-        <h2 data-ar="خدماتي" data-en="My Services" data-fr="Mes services">خدماتي</h2>
-        <div class="services-grid">
-            <div class="service">
-                <img src="img/icons/web.png" alt="Web Development">
-                <h3 data-ar="تطوير مواقع ويب" data-en="Web Development" data-fr="Développement Web">تطوير مواقع ويب</h3>
-                <p data-ar="تصميم وبرمجة مواقع متجاوبة وسريعة."
-                   data-en="Responsive and fast website design & development."
-                   data-fr="Conception et développement de sites Web rapides et responsives.">
-                   تصميم وبرمجة مواقع متجاوبة وسريعة.
-                </p>
-            </div>
-            <div class="service">
-                <img src="img/icons/desktop.png" alt="Desktop Apps">
-                <h3 data-ar="تطبيقات سطح المكتب" data-en="Desktop Apps" data-fr="Applications de bureau">تطبيقات سطح المكتب</h3>
-                <p data-ar="تطوير تطبيقات سطح المكتب باستخدام C#, Java, Python."
-                   data-en="Desktop apps development using C#, Java, Python."
-                   data-fr="Développement d'applications de bureau avec C#, Java, Python.">
-                   تطوير تطبيقات سطح المكتب باستخدام C#, Java, Python.
-                </p>
-            </div>
-            <div class="service">
-                <img src="img/icons/ai.png" alt="AI Solutions">
-                <h3 data-ar="حلول ذكاء اصطناعي" data-en="AI Solutions" data-fr="Solutions IA">حلول ذكاء اصطناعي</h3>
-                <p data-ar="تطوير أنظمة ذكية لمعالجة البيانات واتخاذ القرارات."
-                   data-en="Develop intelligent systems for data analysis and decision making."
-                   data-fr="Développement de systèmes intelligents pour l'analyse de données et la prise de décision.">
-                   تطوير أنظمة ذكية لمعالجة البيانات واتخاذ القرارات.
-                </p>
-            </div>
-            <div class="service">
-                <img src="img/icons/excel.png" alt="Excel Management">
-                <h3 data-ar="إدارة Excel" data-en="Excel Management" data-fr="Gestion Excel">إدارة Excel</h3>
-                <p data-ar="تصميم نماذج، جداول وتحليل البيانات باستخدام Excel."
-                   data-en="Design templates, spreadsheets and data analysis with Excel."
-                   data-fr="Conception de modèles, tableaux et analyse de données avec Excel.">
-                   تصميم نماذج، جداول وتحليل البيانات باستخدام Excel.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== Skills Section ===== -->
-<section id="skills">
-    <div class="container">
-        <h2 data-ar="مهاراتي" data-en="My Skills" data-fr="Mes compétences">مهاراتي</h2>
-        <div class="skills-grid">
-            <div class="skill">HTML & CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Java</div>
-            <div class="skill">C#</div>
-            <div class="skill">Python</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">SQL & Databases</div>
-            <div class="skill">Excel Advanced</div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== Portfolio Section ===== -->
-<section id="portfolio">
-    <div class="container">
-        <h2 data-ar="مشاريعي" data-en="My Projects" data-fr="Mes projets">مشاريعي</h2>
-        <div class="projects-grid">
-            <div class="project">
-                <a href="projects/project1.html">
-                    <img src="img/project1.jpg" alt="Project 1">
-                    <h3 data-ar="موقع تجارة إلكترونية" data-en="E-commerce Website" data-fr="Site E-commerce">موقع تجارة إلكترونية</h3>
-                    <p data-ar="HTML, CSS, JS" data-en="HTML, CSS, JS" data-fr="HTML, CSS, JS">HTML, CSS, JS</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/project2.html">
-                    <img src="img/project2.jpg" alt="Project 2">
-                    <h3 data-ar="تطبيق إدارة الموظفين" data-en="Employee Management App" data-fr="Application de gestion des employés">تطبيق إدارة الموظفين</h3>
-                    <p data-ar="C#, WPF, SQL" data-en="C#, WPF, SQL" data-fr="C#, WPF, SQL">C#, WPF, SQL</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/project3.html">
-                    <img src="img/project3.jpg" alt="Project 3">
-                    <h3 data-ar="نظام ذكاء اصطناعي" data-en="AI System" data-fr="Système IA">نظام ذكاء اصطناعي</h3>
-                    <p data-ar="Python, Machine Learning" data-en="Python, Machine Learning" data-fr="Python, Machine Learning">Python, Machine Learning</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== Reviews Section ===== -->
-<section id="reviews">
-    <div class="container">
-        <h2 data-ar="آراء العملاء" data-en="Customer Reviews" data-fr="Avis des clients">آراء العملاء</h2>
-        <div class="reviews-grid">
-            <div class="review">
-                <p data-ar='"خدمة ممتازة!"' data-en='"Excellent service!"' data-fr='"Service excellent!"'>خدمة ممتازة!</p>
-                <h4>أحمد بن سعيد</h4>
-            </div>
-            <div class="review">
-                <p data-ar='"التواصل كان رائعاً."' data-en='"Communication was great."' data-fr='"La communication était excellente."'>التواصل كان رائعاً.</p>
-                <h4>ليلى الزهري</h4>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== Contact Section ===== -->
-<section id="contact">
-    <div class="container">
-        <h2 data-ar="تواصل معي" data-en="Contact Me" data-fr="Contactez-moi">تواصل معي</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="اسمك" required
-                   data-ar="اسمك" data-en="Your Name" data-fr="Votre nom">
-            <input type="email" name="email" placeholder="بريدك الإلكتروني" required
-                   data-ar="بريدك الإلكتروني" data-en="Your Email" data-fr="Votre Email">
-            <textarea name="message" placeholder="رسالتك" required
-                      data-ar="رسالتك" data-en="Your Message" data-fr="Votre message"></textarea>
-            <button type="submit" data-ar="إرسال" data-en="Send" data-fr="Envoyer">إرسال</button>
-        </form>
-        <div class="socials">
-            <a href="#" target="_blank"><i class="fab fa-linkedin">www.linkedin.com/in/belmel-ahmed-004b291a7</i></a>
-            <a href="#" target="_blank"><i class="fab fa-github">https://github.com/aissaabk</i></a>
-            <a href="#" target="_blank"><i class="fab fa-facebook">https://web.facebook.com/islamic.rien.autre</i></a>
-        </div>
-    </div>
-</section>
-
-<script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>المنهل للبرمجيات</title>
+    <meta name="description" content="تطبيقات أندرويد وويندوز ولينكس، مع صفحة تفاصيل وسياسة خصوصية لكل تطبيق." />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
 
 
@@ -705,6 +536,20 @@ FILE: overview.html
 
 
 ================================================================================
+FILE: package.json
+================================================================================
+{
+  "name": "manhal-software",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build", "preview": "vite preview" },
+  "dependencies": { "react": "^18.3.1", "react-dom": "^18.3.1", "react-router-dom": "^6.26.0" },
+  "devDependencies": { "@vitejs/plugin-react": "^4.3.1", "vite": "^5.4.0" }
+}
+
+
+================================================================================
 FILE: review-app.html
 ================================================================================
 <!DOCTYPE html>
@@ -898,6 +743,17 @@ FILE: sidebar.html
     <hr>
    
   </div>
+
+
+================================================================================
+FILE: vite.config.js
+================================================================================
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import staticPolicies from "./vite-plugins/staticPolicies.js";
+
+// موقع مستخدم (username.github.io) => base = "/"
+export default defineConfig({ base: "/", plugins: [react(), staticPolicies()] });
 
 
 ================================================================================
@@ -1584,18 +1440,6 @@ form button:hover {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
-
-
-================================================================================
-FILE: icon\iconfile.md
-================================================================================
-the current folder for add icon files
-
-
-================================================================================
-FILE: imgs\img.md
-================================================================================
-folder for upload images
 
 
 ================================================================================
@@ -2459,4 +2303,785 @@ FILE: projects\project1.html
     </script>
 </body>
 </html>
+
+
+================================================================================
+FILE: src\App.jsx
+================================================================================
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./pages/Home.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import About from "./pages/About.jsx";
+import NotFound from "./pages/NotFound.jsx";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => window.scrollTo(0, 0), [pathname]);
+  return null;
+}
+
+export default function App() {
+  return (
+    <div className="wrap">
+      <ScrollToTop />
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/app/:id" element={<ProjectDetail />} />
+          <Route path="/privacy/:id" element={<Privacy />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+
+================================================================================
+FILE: src\config.js
+================================================================================
+export const CONFIG = {
+  owner: { ar: "المنهل للبرمجيات", en: "Al-Manhal Software", zh: "Al-Manhal 软件" },
+  email: "you@example.com", // بريد التواصل (يظهر في سياسات الخصوصية)
+  apkBase: "https://YOUR-STORE-DOMAIN/", // apk_path يُلحق بهذا المسار
+  policyDate: "2026-09-30",
+};
+
+
+================================================================================
+FILE: src\main.jsx
+================================================================================
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { HashRouter } from "react-router-dom";
+import App from "./App.jsx";
+import { I18nProvider } from "./i18n/I18nContext.jsx";
+import "./styles/index.css";
+
+createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <HashRouter>
+      <I18nProvider>
+        <App />
+      </I18nProvider>
+    </HashRouter>
+  </React.StrictMode>
+);
+
+
+================================================================================
+FILE: src\components\Footer.jsx
+================================================================================
+import { CONFIG } from "../config.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
+
+export default function Footer() {
+  const { lang, t } = useI18n();
+  return <footer>© {new Date().getFullYear()} {CONFIG.owner[lang]} — {t("foot")}</footer>;
+}
+
+
+================================================================================
+FILE: src\components\Header.jsx
+================================================================================
+import { Link, NavLink } from "react-router-dom";
+import { CONFIG } from "../config.js";
+import { LANGS } from "../i18n/strings.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
+
+export default function Header() {
+  const { lang, setLang, t } = useI18n();
+  return (
+    <header className="top">
+      <Link className="brand" to="/">{CONFIG.owner[lang]}</Link>
+      <nav>
+        <NavLink to="/">{t("nav_projects")}</NavLink>
+        <NavLink to="/about">{t("nav_about")}</NavLink>
+        <a href={`mailto:${CONFIG.email}`}>{t("nav_contact")}</a>
+        <span className="langsw" role="group" aria-label={t("lang")}>
+          {Object.entries(LANGS).map(([k, v]) => (
+            <button key={k} className="chip sm" lang={k} aria-pressed={k === lang} onClick={() => setLang(k)}>{v.name}</button>
+          ))}
+        </span>
+      </nav>
+    </header>
+  );
+}
+
+
+================================================================================
+FILE: src\components\Icon.jsx
+================================================================================
+export default function Icon({ project }) {
+  const letter = project.n.replace(/[^A-Za-z\u0600-\u06FF]/g, "").charAt(0) || "•";
+  return (
+    <div className="ico" style={{ background: project.c }} aria-hidden="true">
+      {letter}
+    </div>
+  );
+}
+
+
+================================================================================
+FILE: src\components\PlatformBadges.jsx
+================================================================================
+import { PLATFORMS } from "../data/projects.js";
+
+export default function PlatformBadges({ platforms }) {
+  return (
+    <div className="badges">
+      {platforms.map((x) => (
+        <span className="b" key={x}>{PLATFORMS[x]}</span>
+      ))}
+    </div>
+  );
+}
+
+
+================================================================================
+FILE: src\components\ProjectCard.jsx
+================================================================================
+import { Link } from "react-router-dom";
+import Icon from "./Icon.jsx";
+import PlatformBadges from "./PlatformBadges.jsx";
+import { localize } from "../i18n/projectText.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
+
+export default function ProjectCard({ project }) {
+  const { lang } = useI18n();
+  const p = localize(project, lang);
+  return (
+    <Link className="card" to={`/app/${p.k}`}>
+      <Icon project={p} />
+      <h3>{p.n}</h3>
+      <p>{p.d}</p>
+      <PlatformBadges platforms={p.pl} />
+    </Link>
+  );
+}
+
+
+================================================================================
+FILE: src\data\legacyLinks.js
+================================================================================
+/**
+ * روابط سياسات الخصوصية القديمة التي وُضعت في المنصات.
+ * لكل مشروع (المعرّف k) اكتب المسارات القديمة كما هي بالضبط (نسبةً لجذر الموقع)،
+ * وسيُنشئ البناء صفحة سياسة ثابتة (عربي/إنجليزي/صيني) على كل مسار منها.
+ *
+ * مثال:
+ *   universalprint: ["privacy/universalprint.html", "policies/print"],
+ *
+ * مسار بلا امتداد (مثل policies/print) يصير policies/print/index.html فيُفتح بالرابط نفسه.
+ */
+export const LEGACY_POLICY_PATHS = {
+  // k: ["المسار/القديم.html"],
+};
+
+
+================================================================================
+FILE: src\data\projects.js
+================================================================================
+/**
+ * قائمة المشاريع — هذا هو الملف الوحيد الذي تعدّله لإضافة مشروع جديد.
+ *
+ * k: المعرّف في الرابط | n: الاسم | c: لون الأيقونة | cat: التصنيف
+ * pl: المنصات (android | windows | linux | mac | web)
+ * d: الوصف | f: المزايا | credit/repo: إشارة لمشروع مفتوح المصدر
+ * apks: [{l: عنوان, p: apk_path, s: bytes, v: الإصدار, sdk: min_sdk, h: SHA-256}]
+ * dl: [{l: عنوان, u: رابط}] — استخدم "#" لعرض "قريبًا"
+ * data: ما يجمعه التطبيق ويولّد سياسة الخصوصية: net | acct | files | media | ads
+ * hidden: true لإخفاء المشروع من الموقع
+ */
+export const projects = [
+{k:"quran-school",n:"إدارة المدارس القرآنية",c:"#0a6b5f",cat:"تعليم",pl:["windows","android"],
+ d:"نظام متكامل لمدارس تحفيظ القرآن: برنامج ويندوز للمسيّرين لإدارة الطلاب والحلقات والحضور، وتطبيق هاتف للآباء لمتابعة تقدم أبنائهم.",
+ f:["برنامج ويندوز للمسيّرين","تطبيق أندرويد لأولياء الأمور","متابعة الحضور والحفظ والمراجعة"],
+ apks:[{l:"تطبيق الآباء",p:"apps/com.quranicschool.parents/app-release.apk",s:15678656,v:"1.0.0",sdk:24,h:"7740b6dcf5d12af7af616c61d979b5ed476999d52879f98a7513d6b261fc4b7d"},
+       {l:"تطبيق الإدارة (أندرويد)",p:"apps/com.quranicschool.admin/app-release.apk",s:15662192,v:"1.0.0",sdk:24,h:"36e8e7fda1978a994116bac03b32b909f5b3d78b5f6af85f73512f3a8fd012bb"}],
+ dl:[{l:"نسخة ويندوز للمسيّرين",u:"#"}],data:{net:1,acct:1}},
+{k:"school-manager",n:"إدارة المدارس التعليمية",c:"#2f5fa8",cat:"تعليم",pl:["windows","android"],
+ d:"برنامج لإدارة مدارس اللغات ودروس الدعم والمدارس الخاصة: التسجيل، الأفواج، الجداول، الدفعات والتقارير.",
+ f:["الأفواج والجداول","الدفعات والفواتير","تقارير الحضور والنتائج"],dl:[{l:"نسخة ويندوز",u:"#"}],data:{net:1,acct:1}},
+{k:"downloader",n:"برنامج التحميل متعدد الأنظمة",c:"#7a3fa0",cat:"أدوات",pl:["windows","linux","mac","android"],
+ d:"مدير تحميل سريع يعمل على ويندوز ولينكس وماك وأندرويد، مع استئناف التحميل وتعدد الاتصالات.",
+ f:["استئناف التحميل","تحميل متعدد المسارات","واجهة موحدة على كل الأنظمة"],
+ dl:[{l:"Windows",u:"#"},{l:"Linux",u:"#"},{l:"macOS",u:"#"}],data:{net:1,files:1}},
+{k:"vrka",n:"محمّل الفيديو (VRKA)",c:"#c0392b",cat:"أدوات",pl:["android"],
+ d:"تطبيق أندرويد لتحميل الفيديوهات من المصادر المدعومة، مبني على المشروع مفتوح المصدر VRKA-Android.",
+ f:["تحميل بجودات مختلفة","حفظ في مجلد التنزيلات"],repo:"https://github.com/MaverickRox/VRKA-Android",
+ credit:"مبني على مشروع مفتوح المصدر لـ MaverickRox. راجع رخصة المشروع الأصلي وأبقِ الإشارة لصاحبه.",dl:[{l:"APK",u:"#"}],data:{net:1,files:1}},
+{k:"code-studio",n:"Mobile Code Studio",c:"#1f2937",cat:"أدوات",pl:["android"],
+ d:"محرر أكواد للهاتف بتجربة قريبة من VS Code: تلوين الصيغ، إدارة الملفات، ومحرر بعدة تبويبات.",
+ f:["تلوين الصيغة","إدارة المشاريع والملفات"],
+ apks:[{l:"الإصدار التجريبي",p:"apps/com.mobilecodestudio.app/app-release.apk",s:11008923,v:"0.1.0-stage1",sdk:26,h:"35c5e2db4c578fb825c9efda04c859cf2a5dbeec42884d213562debab60001dc"}],data:{files:1}},
+{k:"windows-ide",n:"بيئة تطوير لويندوز",c:"#0e6ba8",cat:"أدوات",pl:["windows"],
+ d:"محرر أكواد (IDE) لنظام ويندوز يحاكي واجهة VS Code: مستكشف ملفات، تبويبات، محرر طرفية وإضافات.",
+ f:["واجهة مألوفة لمستخدمي VS Code","محرر وطرفية مدمجة"],dl:[{l:"نسخة ويندوز",u:"#"}],data:{files:1}},
+{k:"universalprint",n:"UniversalPrint",c:"#455a64",cat:"أدوات",pl:["windows","android"],
+ d:"نظام طباعة من الهاتف إلى أي طابعة: ثبّت خادم UniversalPrint على حاسوب ويندوز المتصل بالطابعة، ثم أرسل المستندات والصور من تطبيق أندرويد عبر الشبكة.",
+ f:["خادم ويندوز يدير الطابعات المتصلة بالحاسوب","تطبيق أندرويد لإرسال الملفات للطباعة","يعمل عبر الشبكة المحلية"],
+ dl:[{l:"خادم UniversalPrint لويندوز",u:"#"}],
+ apks:[{l:"تطبيق الطباعة (أندرويد)",p:"apps/com.devbelmel.universalprinter/app-release.apk",s:12282108,v:"1.0",sdk:26,h:"ce009ffeb13e36dcb6ae4df00be085487de4d146c1b396aef6c8940af320755f"}],data:{net:1,files:1}},
+{k:"aliaffiliate",n:"AliAffiliate",c:"#e2531f",cat:"تجارة",pl:["android"],
+ d:"تطبيق للتسويق بالعمولة يعرض منتجات AliExpress مع روابط الشراء.",
+ apks:[{l:"AliAffiliate",p:"apps/com.aliaffiliate.app/app-release.apk",s:6962473,v:"1.0",sdk:24,h:"53547d220d25144018afffc02552b08c8d62cc40632a9e5dffeb3a35d8cba34f"}],data:{net:1,ads:1}},
+{k:"offers",n:"Offers",c:"#b8860b",cat:"تجارة",pl:["android"],
+ d:"تجميع العروض والتخفيضات في مكان واحد.",
+ apks:[{l:"Offers",p:"apps/com.devbelmel.offers_app/app-release.apk",s:15102698,v:"1.0",sdk:24,h:"fede9115f8ccc4ab16dfd14bcbc7d75beb6e6a756d4b65574a2e7eeb5ec05093"}],data:{net:1}},
+{k:"appstore",n:"AppStore",c:"#1b7f5a",cat:"أدوات",pl:["android"],
+ d:"متجر تطبيقات مستقل لتنزيل تطبيقاتي وتحديثها مع التحقق من البصمة (SHA-256).",
+ apks:[{l:"AppStore",p:"apps/com.devbelmel.appstore_app/app-release.apk",s:4608362,v:"0.1.0",sdk:26,h:"64954553a3b36d4a87762f064a1bf74a33afefa6d8044aa1777568f6e7fee7f3"}],data:{net:1,files:1}},
+{k:"manhal",n:"Manhal",c:"#6b4e2e",cat:"تعليم",pl:["android"],
+ d:"تطبيق تعليمي.",apks:[{l:"Manhal",p:"apps/com.devbelmel.manhal_app/app-release.apk",s:10776006,v:"1.0",sdk:24,h:"0ceab02ff67222347128bdd2c021e6f3285cf0c26536dba0b60ccdccf2d81011"}],data:{net:1}},
+{k:"hikmah",n:"Hikmah",c:"#8a5a9a",cat:"تعليم",pl:["android"],
+ d:"تطبيق حِكَم وفوائد يومية.",apks:[{l:"Hikmah",p:"apps/com.hikmah.app/app-release.apk",s:18905589,v:"1.0",sdk:24,h:"3782fcbf45791c05de7cb86305e29b35b9c48ed5129c02e83b167edb3b80ac8a"}],data:{net:1}},
+{k:"mediahub",n:"MediaHub",c:"#d6336c",cat:"وسائط",pl:["android"],
+ d:"مركز للوسائط: تصفح ومشاهدة المحتوى، مع تطبيق إدارة مخصص للمشرف.",
+ apks:[{l:"MediaHub",p:"apps/com.mediahub.app/app-release.apk",s:5770215,v:"1.0",sdk:24,h:"de06e6225f5dccb0ef2fa59228f388d12998c2b2445569c7faac91c509b107ef"},
+       {l:"MediaHub Admin",p:"apps/com.mediahub.admin/app-release.apk",s:2983718,v:"1.0",sdk:24,h:"c0cd8319b50478a01990ebfab7dc3f90a7194a4a738479acd3c864a52d7167ab"}],data:{net:1,acct:1,media:1}},
+{k:"partscompat",n:"PartsCompat",c:"#37474f",cat:"أدوات",pl:["android"],
+ d:"التحقق من توافق قطع الغيار مع الموديلات.",
+ apks:[{l:"PartsCompat",p:"apps/com.devbelmel.partscompat_app/app-release.apk",s:10260132,v:"1.0",sdk:24,h:"073f70a99907c45bb45924e775339f5868a582f759eb47057902a05e6c4fb95c"}],data:{net:1}},
+{k:"shwiya",n:"Shwiya",c:"#c2410c",cat:"وسائط",pl:["android"],
+ d:"تطبيق ترفيهي خفيف.",apks:[{l:"Shwiya",p:"apps/com.devbelmel.shwiya_app/app-release.apk",s:14001482,v:"0.1.0",sdk:26,h:"92ab0373863b976c286c1f9083558c9f2fcc72a870f14ad84141aa681b877078"}],data:{net:1,media:1}},
+{k:"tikclone",n:"TikClone",c:"#111827",cat:"وسائط",hidden:true,pl:["android"],
+ d:"تجربة فيديوهات قصيرة.",apks:[{l:"TikClone",p:"apps/com.devbelmel.tikclone_app/app-release.apk",s:13950989,v:"0.1.0",sdk:26,h:"856ff9e6ba5a622177844e61399ebde862ee16b3f7254c25d93fd300d8e5e139"}],data:{net:1,media:1,acct:1}}
+];
+
+export const PLATFORMS = { android: "Android", windows: "Windows", linux: "Linux", mac: "macOS", web: "Web" };
+
+export const visibleProjects = projects.filter((p) => !p.hidden);
+export const getProject = (id) => projects.find((p) => p.k === id);
+
+
+================================================================================
+FILE: src\i18n\I18nContext.jsx
+================================================================================
+import { createContext, useContext, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { LANGS, STR } from "./strings.js";
+
+const Ctx = createContext(null);
+const stored = () => { try { return localStorage.getItem("lang"); } catch { return null; } };
+
+export function I18nProvider({ children }) {
+  const [sp, setSp] = useSearchParams();
+  const q = sp.get("lang"); // مثال: /#/privacy/app?lang=zh
+  const [lang, setL] = useState(LANGS[q] ? q : LANGS[stored()] ? stored() : "ar");
+
+  useEffect(() => { if (LANGS[q]) setL(q); }, [q]);
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = LANGS[lang].dir;
+  }, [lang]);
+
+  const setLang = (l) => {
+    setL(l);
+    try { localStorage.setItem("lang", l); } catch { /* ignore */ }
+    if (q) { const n = new URLSearchParams(sp); n.set("lang", l); setSp(n, { replace: true }); }
+  };
+  const t = (k, vars = {}) => (STR[lang][k] ?? k).replace(/\{(\w+)\}/g, (_, v) => vars[v] ?? "");
+  return <Ctx.Provider value={{ lang, setLang, t }}>{children}</Ctx.Provider>;
+}
+
+export const useI18n = () => useContext(Ctx);
+
+
+================================================================================
+FILE: src\i18n\projectText.js
+================================================================================
+// ترجمات وصف المشاريع ومزاياها. العربية تُقرأ من data/projects.js مباشرة.
+const TR = {
+  "quran-school": {
+    en: { d: "A complete system for Quran memorization schools: a Windows program for administrators to manage students, circles and attendance, and a phone app for parents to follow their children's progress.", f: ["Windows program for administrators", "Android app for parents", "Track attendance, memorization and revision"] },
+    zh: { d: "面向古兰经学校的完整系统：管理员使用的 Windows 程序，用于管理学生、学习小组和出勤；家长使用的手机应用，用于跟踪孩子的学习进度。", f: ["管理员 Windows 程序", "家长 Android 应用", "跟踪出勤、背诵和复习"] },
+  },
+  "school-manager": {
+    en: { d: "Software for language schools, tutoring centers and private schools: enrollment, groups, timetables, payments and reports.", f: ["Groups and timetables", "Payments and invoices", "Attendance and results reports"] },
+    zh: { d: "适用于语言学校、辅导中心和私立学校的管理软件：报名、班级、课表、缴费和报表。", f: ["班级与课表", "缴费与发票", "出勤与成绩报表"] },
+  },
+  downloader: {
+    en: { d: "A fast download manager for Windows, Linux, macOS and Android, with resume support and multiple connections.", f: ["Resume downloads", "Multi-connection downloading", "One interface on every system"] },
+    zh: { d: "支持 Windows、Linux、macOS 和 Android 的快速下载管理器，支持断点续传和多线程下载。", f: ["断点续传", "多线程下载", "所有系统界面一致"] },
+  },
+  vrka: {
+    en: { d: "An Android app for downloading videos from supported sources, built on the open-source VRKA-Android project.", f: ["Multiple quality options", "Saves to the Downloads folder"], credit: "Based on an open-source project by MaverickRox. Check the original license and keep the attribution." },
+    zh: { d: "用于从受支持来源下载视频的 Android 应用，基于开源项目 VRKA-Android 开发。", f: ["多种清晰度可选", "保存到下载文件夹"], credit: "基于 MaverickRox 的开源项目。请查看原项目许可证并保留署名。" },
+  },
+  "code-studio": {
+    en: { d: "A mobile code editor with a VS Code-like experience: syntax highlighting, file management and multi-tab editing.", f: ["Syntax highlighting", "Project and file management"] },
+    zh: { d: "体验接近 VS Code 的手机代码编辑器：语法高亮、文件管理和多标签编辑。", f: ["语法高亮", "项目与文件管理"] },
+  },
+  "windows-ide": {
+    en: { d: "A code editor (IDE) for Windows that mimics the VS Code interface: file explorer, tabs, integrated terminal and extensions.", f: ["Familiar for VS Code users", "Built-in editor and terminal"] },
+    zh: { d: "适用于 Windows 的代码编辑器（IDE），界面类似 VS Code：文件浏览器、标签页、内置终端和扩展。", f: ["VS Code 用户上手即用", "内置编辑器和终端"] },
+  },
+  universalprint: {
+    en: { d: "Print from your phone to any printer: install the UniversalPrint server on the Windows PC connected to the printer, then send documents and photos from the Android app over the network.", f: ["Windows server manages the connected printers", "Android app sends files to print", "Works over the local network"] },
+    zh: { d: "从手机打印到任意打印机：在连接打印机的 Windows 电脑上安装 UniversalPrint 服务端，然后通过 Android 应用经网络发送文档和图片。", f: ["Windows 服务端管理已连接的打印机", "Android 应用发送文件打印", "通过局域网工作"] },
+  },
+  aliaffiliate: { en: { d: "An affiliate marketing app showing AliExpress products with purchase links." }, zh: { d: "联盟营销应用，展示 AliExpress 商品并提供购买链接。" } },
+  offers: { en: { d: "All offers and discounts in one place." }, zh: { d: "把所有优惠和折扣集中在一个地方。" } },
+  appstore: { en: { d: "An independent app store to download and update our apps, with SHA-256 verification." }, zh: { d: "独立应用商店，用于下载和更新我们的应用，并进行 SHA-256 校验。" } },
+  manhal: { en: { d: "An educational app." }, zh: { d: "教育类应用。" } },
+  hikmah: { en: { d: "An app with daily wisdom and benefits." }, zh: { d: "每日箴言与知识分享应用。" } },
+  mediahub: { en: { d: "A media hub to browse and watch content, with a dedicated admin app for the moderator." }, zh: { d: "媒体中心，可浏览和观看内容，并配有管理员专用的管理应用。" } },
+  partscompat: { en: { d: "Check whether spare parts are compatible with a given model." }, zh: { d: "检查备件与指定型号是否兼容。" } },
+  shwiya: { en: { d: "A lightweight entertainment app." }, zh: { d: "轻量级娱乐应用。" } },
+};
+
+const LABELS = {
+  "تطبيق الآباء": { en: "Parents app", zh: "家长端应用" },
+  "تطبيق الإدارة (أندرويد)": { en: "Admin app (Android)", zh: "管理端应用（Android）" },
+  "نسخة ويندوز للمسيّرين": { en: "Windows version for administrators", zh: "管理员 Windows 版" },
+  "نسخة ويندوز": { en: "Windows version", zh: "Windows 版" },
+  "الإصدار التجريبي": { en: "Preview build", zh: "预览版" },
+  "تطبيق الطباعة (أندرويد)": { en: "Print app (Android)", zh: "打印应用（Android）" },
+  "خادم UniversalPrint لويندوز": { en: "UniversalPrint server for Windows", zh: "UniversalPrint Windows 服务端" },
+};
+
+export const localize = (p, lang) => (lang === "ar" ? p : { ...p, ...(TR[p.k]?.[lang] || {}) });
+export const label = (l, lang) => (lang === "ar" ? l : LABELS[l]?.[lang] || l);
+
+
+================================================================================
+FILE: src\i18n\strings.js
+================================================================================
+export const LANGS = {
+  ar: { name: "العربية", dir: "rtl" },
+  en: { name: "English", dir: "ltr" },
+  zh: { name: "中文", dir: "ltr" },
+};
+
+export const STR = {
+  ar: {
+    nav_projects: "المشاريع", nav_about: "من نحن", nav_contact: "تواصل", lang: "اللغة",
+    foot: "لكل تطبيق سياسة خصوصية برابط ثابت يمكن استخدامه في Google Play.",
+    hero_t: "تطبيقات تعمل على هاتفك وحاسوبك",
+    hero_p: "نطوّر تطبيقات أندرويد وبرامج ويندوز ولينكس، وكل تطبيق له صفحة تعريف ورابط تنزيل مباشر وسياسة خصوصية واضحة.",
+    st_proj: "مشروعًا", st_and: "على أندرويد", st_desk: "لسطح المكتب", all: "الكل", cats: "التصنيف",
+    cat_edu: "تعليم", cat_tools: "أدوات", cat_shop: "تجارة", cat_media: "وسائط",
+    features: "المزايا", privacy: "الخصوصية", pol_a: "اقرأ", pol_b: "سياسة الخصوصية الخاصة بـ {n}", pol_c: "لمعرفة ما يُجمع من بيانات وكيف يُستخدم.",
+    repo: "المشروع الأصلي على GitHub", dl_h: "التنزيل", dl_apk: "تنزيل {l} (APK · {s})", dl_soon: "قريبًا: {l}", dl_get: "تنزيل {l}",
+    det: "التفاصيل", plats: "المنصات", cat: "التصنيف", ver: "الإصدار", minand: "أدنى أندرويد", pol_short: "سياسة الخصوصية",
+    about_p: "شركة برمجيات تبني تطبيقات أندرويد وبرامج سطح المكتب للمدارس والأفراد والشركات الصغيرة. إن كانت لديك فكرة أو مدرسة تحتاج نظامًا، راسلنا.",
+    about_btn: "راسلنا", nf_t: "الصفحة غير موجودة", nf_p: "الرابط الذي فتحته غير صحيح أو حُذف المشروع.", nf_b: "العودة إلى المشاريع",
+    t_home: "{o} | تطبيقات أندرويد وسطح المكتب", t_about: "من نحن | {o}", t_pol: "سياسة الخصوصية - {n}",
+  },
+  en: {
+    nav_projects: "Projects", nav_about: "About", nav_contact: "Contact", lang: "Language",
+    foot: "Every app has a privacy policy with a permanent link you can use on Google Play.",
+    hero_t: "Apps for your phone and your computer",
+    hero_p: "We build Android apps and Windows and Linux software. Each app has its own page, a direct download link and a clear privacy policy.",
+    st_proj: "projects", st_and: "on Android", st_desk: "for desktop", all: "All", cats: "Category",
+    cat_edu: "Education", cat_tools: "Tools", cat_shop: "Shopping", cat_media: "Media",
+    features: "Features", privacy: "Privacy", pol_a: "Read the", pol_b: "{n} privacy policy", pol_c: "to see what data is collected and how it is used.",
+    repo: "Original project on GitHub", dl_h: "Download", dl_apk: "Download {l} (APK · {s})", dl_soon: "Coming soon: {l}", dl_get: "Download {l}",
+    det: "Details", plats: "Platforms", cat: "Category", ver: "Version", minand: "Min. Android", pol_short: "Privacy policy",
+    about_p: "A software company building Android apps and desktop software for schools, individuals and small businesses. Have an idea, or a school that needs a system? Get in touch.",
+    about_btn: "Contact us", nf_t: "Page not found", nf_p: "The link is wrong or the project was removed.", nf_b: "Back to projects",
+    t_home: "{o} | Android and desktop apps", t_about: "About | {o}", t_pol: "Privacy Policy - {n}",
+  },
+  zh: {
+    nav_projects: "项目", nav_about: "关于我们", nav_contact: "联系", lang: "语言",
+    foot: "每个应用都有独立的隐私政策，链接固定，可用于 Google Play。",
+    hero_t: "适用于手机和电脑的应用",
+    hero_p: "我们开发 Android 应用以及 Windows 和 Linux 软件。每个应用都有专属页面、直接下载链接和清晰的隐私政策。",
+    st_proj: "个项目", st_and: "支持 Android", st_desk: "支持桌面端", all: "全部", cats: "分类",
+    cat_edu: "教育", cat_tools: "工具", cat_shop: "购物", cat_media: "媒体",
+    features: "功能", privacy: "隐私", pol_a: "阅读", pol_b: "{n} 隐私政策", pol_c: "，了解收集哪些数据以及如何使用。",
+    repo: "GitHub 上的原项目", dl_h: "下载", dl_apk: "下载 {l}（APK · {s}）", dl_soon: "即将推出：{l}", dl_get: "下载 {l}",
+    det: "详情", plats: "平台", cat: "分类", ver: "版本", minand: "最低 Android 版本", pol_short: "隐私政策",
+    about_p: "我们是一家软件公司，为学校、个人和小微企业开发 Android 应用和桌面软件。有想法或需要学校管理系统？欢迎联系我们。",
+    about_btn: "联系我们", nf_t: "页面不存在", nf_p: "链接有误，或该项目已被移除。", nf_b: "返回项目列表",
+    t_home: "{o} | Android 与桌面应用", t_about: "关于我们 | {o}", t_pol: "隐私政策 - {n}",
+  },
+};
+
+export const CAT_KEY = { "تعليم": "cat_edu", "أدوات": "cat_tools", "تجارة": "cat_shop", "وسائط": "cat_media" };
+
+
+================================================================================
+FILE: src\pages\About.jsx
+================================================================================
+import { useEffect } from "react";
+import { CONFIG } from "../config.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
+
+export default function About() {
+  const { lang, t } = useI18n();
+  useEffect(() => { document.title = t("t_about", { o: CONFIG.owner[lang] }); }, [lang]);
+  return (
+    <section className="hero">
+      <h1>{CONFIG.owner[lang]}</h1>
+      <p>{t("about_p")}</p>
+      <a className="btn" href={`mailto:${CONFIG.email}`}>{t("about_btn")}</a>
+    </section>
+  );
+}
+
+
+================================================================================
+FILE: src\pages\Home.jsx
+================================================================================
+import { useEffect, useState } from "react";
+import { visibleProjects } from "../data/projects.js";
+import { CONFIG } from "../config.js";
+import { CAT_KEY } from "../i18n/strings.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
+import ProjectCard from "../components/ProjectCard.jsx";
+
+export default function Home() {
+  const { lang, t } = useI18n();
+  const [cat, setCat] = useState("all");
+  useEffect(() => { document.title = t("t_home", { o: CONFIG.owner[lang] }); }, [lang]);
+
+  const cats = ["all", ...new Set(visibleProjects.map((p) => p.cat))];
+  const shown = visibleProjects.filter((p) => cat === "all" || p.cat === cat);
+  const android = visibleProjects.filter((p) => p.pl.includes("android")).length;
+  const desktop = visibleProjects.filter((p) => p.pl.some((x) => x !== "android")).length;
+
+  return (
+    <>
+      <section className="hero">
+        <h1>{t("hero_t")}</h1>
+        <p>{t("hero_p")}</p>
+        <div className="stats">
+          <span><b>{visibleProjects.length}</b> {t("st_proj")}</span>
+          <span><b>{android}</b> {t("st_and")}</span>
+          <span><b>{desktop}</b> {t("st_desk")}</span>
+        </div>
+      </section>
+      <div className="filters" role="group" aria-label={t("cats")}>
+        {cats.map((c) => (
+          <button key={c} className="chip" aria-pressed={c === cat} onClick={() => setCat(c)}>
+            {c === "all" ? t("all") : t(CAT_KEY[c] || c)}
+          </button>
+        ))}
+      </div>
+      <div className="grid">{shown.map((p) => <ProjectCard key={p.k} project={p} />)}</div>
+    </>
+  );
+}
+
+
+================================================================================
+FILE: src\pages\NotFound.jsx
+================================================================================
+import { Link } from "react-router-dom";
+import { useI18n } from "../i18n/I18nContext.jsx";
+
+export default function NotFound() {
+  const { t } = useI18n();
+  return (
+    <section className="hero">
+      <h1>{t("nf_t")}</h1>
+      <p>{t("nf_p")}</p>
+      <Link className="btn" to="/">{t("nf_b")}</Link>
+    </section>
+  );
+}
+
+
+================================================================================
+FILE: src\pages\Privacy.jsx
+================================================================================
+import { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { getProject } from "../data/projects.js";
+import { buildPolicy } from "../utils/privacy.js";
+import { CONFIG } from "../config.js";
+import { LANGS } from "../i18n/strings.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
+import NotFound from "./NotFound.jsx";
+
+export default function Privacy() {
+  const { id } = useParams();
+  const { lang, t } = useI18n();
+  const p = getProject(id);
+  useEffect(() => { if (p) document.title = t("t_pol", { n: p.n }); }, [p, lang]);
+  if (!p) return <NotFound />;
+
+  const doc = buildPolicy(p, lang);
+  return (
+    <>
+      <div className="crumb"><Link to={`/app/${p.k}`}>{LANGS[lang].dir === "rtl" ? "←" : "→"} {p.n}</Link></div>
+      <article className="policy" dir={LANGS[lang].dir} lang={lang}>
+        <h1>{doc.title}</h1>
+        <p>{doc.meta}</p>
+        {doc.sections.map((s) => (
+          <section key={s.h}>
+            <h2>{s.h}</h2>
+            {s.items ? <ul>{s.items.map((i) => <li key={i}>{i}</li>)}</ul> : s.text && <p>{s.text}</p>}
+            {s.mail && <p><a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a></p>}
+          </section>
+        ))}
+      </article>
+    </>
+  );
+}
+
+
+================================================================================
+FILE: src\pages\ProjectDetail.jsx
+================================================================================
+import { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { getProject, PLATFORMS } from "../data/projects.js";
+import { CONFIG } from "../config.js";
+import { CAT_KEY } from "../i18n/strings.js";
+import { localize, label } from "../i18n/projectText.js";
+import { useI18n } from "../i18n/I18nContext.jsx";
+import Icon from "../components/Icon.jsx";
+import PlatformBadges from "../components/PlatformBadges.jsx";
+import NotFound from "./NotFound.jsx";
+
+const mb = (b) => (b / 1048576).toFixed(1) + " MB";
+
+export default function ProjectDetail() {
+  const { id } = useParams();
+  const { lang, t } = useI18n();
+  const raw = getProject(id);
+  useEffect(() => { if (raw) document.title = `${raw.n} | ${CONFIG.owner[lang]}`; }, [raw, lang]);
+  if (!raw) return <NotFound />;
+
+  const p = localize(raw, lang);
+  const a = p.apks?.[0];
+  return (
+    <>
+      <div className="crumb"><Link to="/">{t("nav_projects")}</Link> / {p.n}</div>
+      <div className="detail">
+        <article>
+          <Icon project={p} />
+          <h1>{p.n}</h1>
+          <PlatformBadges platforms={p.pl} />
+          <p style={{ fontSize: 18 }}>{p.d}</p>
+          {p.f && (<><h2>{t("features")}</h2><ul>{p.f.map((x) => <li key={x}>{x}</li>)}</ul></>)}
+          {p.credit && <div className="note">{p.credit}</div>}
+          {p.repo && <p><a href={p.repo} rel="noopener">{t("repo")}</a></p>}
+          <h2>{t("privacy")}</h2>
+          <p>{t("pol_a")} <Link to={`/privacy/${p.k}`}>{t("pol_b", { n: p.n })}</Link> {t("pol_c")}</p>
+        </article>
+
+        <aside className="panel">
+          <h2>{t("dl_h")}</h2>
+          <div className="dl">
+            {p.apks?.map((x) => (
+              <a key={x.p} className="btn" href={CONFIG.apkBase + x.p} download>{t("dl_apk", { l: label(x.l, lang), s: mb(x.s) })}</a>
+            ))}
+            {p.dl?.map((x) => x.u === "#"
+              ? <span key={x.l} className="btn alt">{t("dl_soon", { l: label(x.l, lang) })}</span>
+              : <a key={x.l} className="btn" href={x.u}>{t("dl_get", { l: label(x.l, lang) })}</a>)}
+          </div>
+          <h2>{t("det")}</h2>
+          <dl>
+            <dt>{t("plats")}</dt><dd>{p.pl.map((x) => PLATFORMS[x]).join(", ")}</dd>
+            <dt>{t("cat")}</dt><dd>{t(CAT_KEY[p.cat] || p.cat)}</dd>
+            {a && (<>
+              <dt>{t("ver")}</dt><dd>{a.v}</dd>
+              <dt>{t("minand")}</dt><dd>API {a.sdk}</dd>
+              <dt>Package</dt><dd>{a.p.split("/")[1]}</dd>
+              <dt>SHA-256</dt><dd className="sha">{a.h}</dd>
+            </>)}
+          </dl>
+          <p style={{ margin: "14px 0 0" }}><Link to={`/privacy/${p.k}`}>{t("pol_short")}</Link></p>
+        </aside>
+      </div>
+    </>
+  );
+}
+
+
+================================================================================
+FILE: src\styles\index.css
+================================================================================
+:root{--bg:#f5f6f4;--card:#fff;--ink:#15211f;--mute:#5d6b68;--line:#dde3e0;--acc:#0a6b5f;--acc-ink:#fff;--warn:#b3541e;--r:14px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1715;--card:#17211f;--ink:#e8efed;--mute:#93a39f;--line:#2a3835;--acc:#3ec9b3;--acc-ink:#04201b;--warn:#f0a06a}}
+:root[data-theme=dark]{--bg:#0f1715;--card:#17211f;--ink:#e8efed;--mute:#93a39f;--line:#2a3835;--acc:#3ec9b3;--acc-ink:#04201b;--warn:#f0a06a}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.75 "IBM Plex Sans Arabic","Noto Sans SC","PingFang SC","Microsoft YaHei",Tahoma,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+.brand{font:700 22px "IBM Plex Sans Arabic",Tahoma,sans-serif;text-decoration:none}
+nav>a{margin-inline-start:18px;text-decoration:none;color:var(--mute);font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 34px}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.3;margin:0 0 14px;font-weight:700;max-width:16em}
+.hero p{color:var(--mute);max-width:36em;margin:0 0 26px;font-size:18px}
+.stats{display:flex;gap:26px;flex-wrap:wrap;color:var(--mute);font-size:15px}
+.stats b{color:var(--ink);font-size:20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 16px;border-radius:99px;font:inherit;font-size:15px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;padding-bottom:60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px;text-decoration:none}
+.card:hover{border-color:var(--acc)}
+.card h3{margin:0;font-size:19px}
+.card p{margin:0;color:var(--mute);font-size:15px;flex:1}
+.ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font:600 20px "Fraunces",serif;color:#fff;direction:ltr}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.b{font-size:13px;border:1px solid var(--line);border-radius:6px;padding:0 8px;color:var(--mute)}
+.btn{display:inline-block;background:var(--acc);color:var(--acc-ink);padding:9px 20px;border-radius:10px;text-decoration:none;font-weight:700;border:0;font-family:inherit;font-size:15px;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.crumb{padding:14px 0;color:var(--mute);font-size:15px}
+.detail{display:grid;grid-template-columns:1fr 320px;gap:32px;padding-bottom:60px}
+@media(max-width:800px){.detail{grid-template-columns:1fr}}
+.detail h1{margin:8px 0 6px;font-size:34px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.panel h2,.detail h2{font-size:18px;margin:22px 0 8px}
+.panel h2:first-child{margin-top:0}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+dt{color:var(--mute)}dd{margin:0;overflow-wrap:anywhere;direction:ltr;text-align:right}
+.dl{display:flex;flex-direction:column;gap:8px;margin-bottom:6px}
+.note{border-inline-start:4px solid var(--warn);padding:6px 12px;color:var(--mute);font-size:14px;margin:14px 0}
+.policy{max-width:760px;padding-bottom:70px}
+.policy h1{font-size:30px}.policy h2{font-size:19px;margin-top:26px}
+.policy[dir=ltr]{font-family:system-ui,sans-serif}
+.langs{display:flex;gap:8px;margin:10px 0}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:14px}
+.sha{font-size:12px;font-family:ui-monospace,monospace}
+nav a.active{color:var(--ink)}
+.btn.alt{cursor:default}
+.langsw{margin-inline-start:18px;display:inline-flex;gap:6px}.chip.sm{padding:0 12px;font-size:14px}
+nav{display:flex;align-items:center;flex-wrap:wrap}
+
+
+================================================================================
+FILE: src\utils\privacy.js
+================================================================================
+import { CONFIG } from "../config.js";
+
+const D = {
+  ar: {
+    title: "سياسة الخصوصية", upd: "آخر تحديث", dev: "المطوّر",
+    H: ["البيانات التي نتعامل معها", "كيف نستخدمها", "المشاركة مع أطراف ثالثة", "الإعلانات", "الاحتفاظ بالبيانات وحذفها", "الأطفال", "التغييرات على السياسة", "التواصل"],
+    net: "الاتصال بالإنترنت أو الشبكة لتحميل المحتوى والتواصل مع الخادم.",
+    acct: "بيانات الحساب (الاسم والبريد أو رقم الهاتف وبيانات الدخول) لتسجيل الدخول وتقديم الخدمة.",
+    files: "الوصول إلى الملفات على جهازك عند اختيارك لها أو حفظها فقط.",
+    media: "تشغيل الوسائط وتخزين مؤقت للمحتوى لتحسين الأداء.",
+    none: "لا يجمع هذا التطبيق أي بيانات شخصية.",
+    use: "نستخدم البيانات المذكورة أعلاه فقط لتشغيل وظائف التطبيق وتحسين أدائه، ولا نستخدمها لأي غرض آخر.",
+    share: "لا نبيع بياناتك ولا نشاركها مع أطراف ثالثة، إلا عند وجود التزام قانوني.",
+    adsY: "قد يعرض التطبيق روابط تسويقية بالعمولة؛ عند فتحها تنطبق سياسة الموقع الوجهة.",
+    adsN: "لا يعرض التطبيق إعلانات.",
+    ret: (e) => `تُحفظ البيانات طالما كان حسابك أو استخدامك قائمًا. لطلب حذف بياناتك راسلنا على ${e} وسنحذفها خلال 30 يومًا.`,
+    kids: "التطبيق غير موجه للأطفال دون 13 عامًا، ولا نجمع بياناتهم عن علم.",
+    chg: "سننشر أي تعديل في هذه الصفحة مع تحديث التاريخ أعلاه.",
+  },
+  en: {
+    title: "Privacy Policy", upd: "Last updated", dev: "Developer",
+    H: ["Data we handle", "How we use it", "Sharing with third parties", "Advertising", "Retention and deletion", "Children", "Changes to this policy", "Contact"],
+    net: "Internet or network access to load content and talk to the server.",
+    acct: "Account data (name, email or phone, credentials) to sign you in and provide the service.",
+    files: "Access to files on your device only when you select or save them.",
+    media: "Media playback and temporary caching to improve performance.",
+    none: "This app does not collect any personal data.",
+    use: "We use the data above only to operate the app's features and improve its performance, and for no other purpose.",
+    share: "We do not sell your data or share it with third parties, except where required by law.",
+    adsY: "The app may show affiliate links; once opened, the destination site's own policy applies.",
+    adsN: "The app does not show ads.",
+    ret: (e) => `Data is kept while your account or use is active. To request deletion, email ${e} and we will delete it within 30 days.`,
+    kids: "The app is not directed to children under 13 and we do not knowingly collect their data.",
+    chg: "Any changes will be posted on this page with an updated date above.",
+  },
+  zh: {
+    title: "隐私政策", upd: "最后更新", dev: "开发者",
+    H: ["我们处理的数据", "数据用途", "与第三方共享", "广告", "数据保留与删除", "儿童", "政策变更", "联系我们"],
+    net: "访问互联网或网络，以加载内容并与服务器通信。",
+    acct: "账户数据（姓名、邮箱或电话、登录凭据），用于登录并提供服务。",
+    files: "仅在您选择或保存文件时访问设备上的文件。",
+    media: "播放媒体并临时缓存内容以提升性能。",
+    none: "本应用不收集任何个人数据。",
+    use: "我们仅将上述数据用于运行应用功能和提升性能，不用于任何其他目的。",
+    share: "我们不会出售您的数据，也不会与第三方共享，法律要求的情况除外。",
+    adsY: "本应用可能显示联盟推广链接；打开后适用目标网站自己的政策。",
+    adsN: "本应用不显示广告。",
+    ret: (e) => `只要您的账户或使用仍在持续，数据就会被保留。如需删除数据，请发送邮件至 ${e}，我们将在 30 天内删除。`,
+    kids: "本应用不面向 13 岁以下儿童，我们不会有意收集其数据。",
+    chg: "任何变更都会发布在本页面，并更新上方的日期。",
+  },
+};
+
+/** يولّد سياسة الخصوصية لمشروع بحسب حقل data (net | acct | files | media | ads). */
+export function buildPolicy(p, lang = "ar") {
+  const T = D[lang] || D.ar;
+  const d = p.data || {};
+  const items = ["net", "acct", "files", "media"].filter((k) => d[k]).map((k) => T[k]);
+  const sep = lang === "zh" ? "：" : ": ";
+  return {
+    title: `${T.title} — ${p.n}`,
+    meta: `${T.upd}${sep}${CONFIG.policyDate}. ${T.dev}${sep}${CONFIG.owner[lang] || CONFIG.owner.en}.`,
+    sections: [
+      items.length ? { h: T.H[0], items } : { h: T.H[0], text: T.none },
+      { h: T.H[1], text: T.use },
+      { h: T.H[2], text: T.share },
+      { h: T.H[3], text: d.ads ? T.adsY : T.adsN },
+      { h: T.H[4], text: T.ret(CONFIG.email) },
+      { h: T.H[5], text: T.kids },
+      { h: T.H[6], text: T.chg },
+      { h: T.H[7], text: "", mail: true },
+    ],
+  };
+}
+
+
+================================================================================
+FILE: vite-plugins\staticPolicies.js
+================================================================================
+import { CONFIG } from "../src/config.js";
+import { projects } from "../src/data/projects.js";
+import { buildPolicy } from "../src/utils/privacy.js";
+import { LEGACY_POLICY_PATHS } from "../src/data/legacyLinks.js";
+
+const NAMES = { ar: "العربية", en: "English", zh: "中文" };
+const DIR = { ar: "rtl", en: "ltr", zh: "ltr" };
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function block(p, lang) {
+  const doc = buildPolicy(p, lang);
+  const body = doc.sections.map((s) =>
+    `<h2>${esc(s.h)}</h2>` +
+    (s.items ? `<ul>${s.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : s.text ? `<p>${esc(s.text)}</p>` : "") +
+    (s.mail ? `<p><a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a></p>` : "")
+  ).join("");
+  return `<article id="${lang}" lang="${lang}" dir="${DIR[lang]}"><h1>${esc(doc.title)}</h1><p>${esc(doc.meta)}</p>${body}</article>`;
+}
+
+// صفحة HTML ثابتة (بلا JavaScript) بثلاث لغات — مناسبة لروابط المنصات وزواحف Google.
+function page(p) {
+  const nav = Object.keys(NAMES).map((l) => `<a href="#${l}" lang="${l}">${NAMES[l]}</a>`).join(" · ");
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(p.n)} — Privacy Policy</title>
+<style>body{font:16px/1.7 system-ui,"Noto Sans SC","Segoe UI",Tahoma,sans-serif;max-width:760px;margin:0 auto;padding:20px;color:#15211f}nav{padding:10px 0;border-bottom:1px solid #ddd}article{padding:16px 0 32px;border-bottom:1px solid #ddd}h1{font-size:26px}h2{font-size:18px;margin-top:22px}a{color:#0a6b5f}</style>
+</head><body><nav>${nav}</nav>${Object.keys(NAMES).map((l) => block(p, l)).join("")}</body></html>`;
+}
+
+const norm = (f) => {
+  const s = f.replace(/^\/+/, "");
+  return /\.[a-z0-9]+$/i.test(s) ? s : s.replace(/\/+$/, "") + "/index.html";
+};
+
+export default function staticPolicies() {
+  return {
+    name: "static-policies",
+    generateBundle() {
+      for (const p of projects) {
+        const html = page(p);
+        const files = new Set([`policy/${p.k}.html`, ...(LEGACY_POLICY_PATHS[p.k] || []).map(norm)]);
+        for (const fileName of files) this.emitFile({ type: "asset", fileName, source: html });
+      }
+    },
+  };
+}
 

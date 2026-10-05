@@ -7,7 +7,7 @@ const loadingScreen = document.createElement('div');
 const loader = document.createElement('div');
 
 // ===== Current Language =====
-let currentLang = 'ar';
+let currentLang = 'en';
 
 // ===== Initialize App =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     
     // Set initial language
-    setLanguage('ar');
+    setLanguage('en');
     
     // Add typing effect to hero text
     addTypingEffect();
@@ -125,7 +125,7 @@ function setLanguage(lang) {
     });
     
     // Update all elements with data attributes
-    document.querySelectorAll('[data-ar]').forEach(element => {
+    document.querySelectorAll('[data-en]').forEach(element => {
         if (element.hasAttribute(`data-${lang}`)) {
             const newText = element.getAttribute(`data-${lang}`);
             
