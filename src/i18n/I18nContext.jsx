@@ -14,9 +14,9 @@ function getStoredLanguage() {
 }
 
 export function I18nProvider({ children }) {
-  const [sp, setSp] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const queryLanguage = sp.get("lang");
+  const queryLanguage = searchParams.get("lang");
   const storedLanguage = getStoredLanguage();
 
   const initialLanguage =
@@ -24,25 +24,27 @@ export function I18nProvider({ children }) {
       ? queryLanguage
       : storedLanguage || "en";
 
-  const [lang, setL] = useState(initialLanguage);
+  const [lang, setLangState] = useState(initialLanguage);
 
   useEffect(() => {
     if (LANGS[queryLanguage]) {
-      setL(queryLanguage);
+      setLangState(queryLanguage);
     }
   }, [queryLanguage]);
 
   useEffect(() => {
-    const language = LANGS[lang] ? lang : "en";
+    const safeLanguage = LANGS[lang] ? lang : "en";
 
-    document.documentElement.lang = language;
-    document.documentElement.dir = LANGS[language].dir;
+    document.documentElement.lang = safeLanguage;
+    document.documentElement.dir = LANGS[safeLanguage].dir;
   }, [lang]);
 
-  const setLang = (language) => {
-    if (!LANGS[language]) return;
+  function setLang(language) {
+    if (!LANGS[language]) {
+      return;
+    }
 
-    setL(language);
+    setLangState(language);
 
     try {
       localStorage.setItem("lang", language);
@@ -51,13 +53,16 @@ export function I18nProvider({ children }) {
     }
 
     if (queryLanguage) {
-      const params = new URLSearchParams(sp);
+      const params = new URLSearchParams(searchParams);
       params.set("lang", language);
-      setSp(params, { replace: true });
-    }
-  };
 
-  const t = (key, vars = {}) => {
+      setSearchParams(params, {
+        replace: true,
+      });
+    }
+  }
+
+  function t(key, vars = {}) {
     const value =
       STR[lang]?.[key] ??
       STR.en?.[key] ??
@@ -67,13 +72,21 @@ export function I18nProvider({ children }) {
       /\{(\w+)\}/g,
       (_, variable) => vars[variable] ?? ""
     );
-  };
+  }
 
   return (
-    <Ctx.Provider value={{ lang, setLang, t }}>
+    <Ctx.Provider
+      value={{
+        lang,
+        setLang,
+        t,
+      }}
+    >
       {children}
     </Ctx.Provider>
   );
 }
 
-export const useI18n = () => useContext(Ctx);
+export function useI18n() {
+  return useContext(Ctx);
+}
