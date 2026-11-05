@@ -21,13 +21,27 @@ export default function Privacy() {
       <article className="policy" dir={LANGS[lang].dir} lang={lang}>
         <h1>{doc.title}</h1>
         <p>{doc.meta}</p>
-        {doc.sections.map((s) => (
-          <section key={s.h}>
-            <h2>{s.h}</h2>
-            {s.items ? <ul>{s.items.map((i) => <li key={i}>{i}</li>)}</ul> : s.text && <p>{s.text}</p>}
-            {s.mail && <p><a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a></p>}
-          </section>
-        ))}
+    {doc.sections.map((s) => (
+  <section key={s.h}>
+    <h2>{s.h}</h2>
+
+    {s.paragraphs
+      ? s.paragraphs.map((t) => <p key={t}>{t}</p>)
+      : s.items
+        ? <ul>{s.items.map((i) => <li key={i}>{i}</li>)}</ul>
+        : s.text && <p>{s.text}</p>}
+
+    {s.links?.map((l) => (
+      <p key={l.u}>
+        <a href={l.u} target="_blank" rel="noopener">{l.t}</a>
+      </p>
+    ))}
+
+    {s.mail && (
+      <p><a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a></p>
+    )}
+  </section>
+))}
       </article>
     </>
   );
