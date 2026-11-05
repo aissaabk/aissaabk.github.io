@@ -45,7 +45,7 @@ export const projects = [
 {k:"offers",n:"باقاتي",c:"#0a6b5f",cat:"أدوات",pl:["android"],
  d:"تطبيق مستقل يجمع خدمات الهاتف المحمول في الجزائر في مكان واحد: تفعيل العروض، متابعة الرصيد، إلغاء الخدمات المدفوعة، وتعبئة إنترنت Idoom 4G من الصفحات الرسمية.",
  f:["التعرّف التلقائي على الشريحة","تفعيل العروض بخطوة واحدة","الرصيد والتحقق من الخصم","إلغاء الخدمات المدفوعة","تعبئة Idoom 4G","سجل محلي خاص","عربي وإنجليزي مع وضع داكن"],
- apks:[{l:"باقاتي",p:"apps/android-offers-app.apk",s:0,v:"1.0.0",sdk:24,h:"3cb00c94a22aa7a10e2bbf7e977b1e84961e3e1e5468e5930733269674aa1583"}],
+ apks:[{l:"باقاتي",p:"apps/android-offers-app.apk",s:0,v:"1.0.0",sdk:24,h:"3cb00c94a22aa7a10e2bbf7e977b1e84961e3e1e5468e5930733269674aa1583"}]},
  data:{net:1,ads:1},
  policyTemplate:"baqati",policyLangs:["ar","en"]},,
 {k:"appstore",n:"AppStore",c:"#1b7f5a",cat:"أدوات",pl:["android"],
