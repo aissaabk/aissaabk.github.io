@@ -1,4 +1,5 @@
 import { CONFIG } from "../config.js";
+import { buildBaqatiPolicy } from "./policies/baqati.js";
 
 const D = {
   ar: {
@@ -51,8 +52,15 @@ const D = {
   },
 };
 
-/** يولّد سياسة الخصوصية لمشروع بحسب حقل data (net | acct | files | media | ads). */
+/** يولّد سياسة الخصوصية لمشروع بحسب حقل data (net | acct | files | media | ads)
+ *  أو بحسب حقل policyTemplate إن وُجد (مثل "baqati"). */
 export function buildPolicy(p, lang = "ar") {
+  // قالب مخصص لتطبيق باقاتي
+  if (p.policyTemplate === "baqati") {
+    return buildBaqatiPolicy(p, lang);
+  }
+
+  // القالب العام (السلوك الأصلي دون تغيير)
   const T = D[lang] || D.ar;
   const d = p.data || {};
   const items = ["net", "acct", "files", "media"].filter((k) => d[k]).map((k) => T[k]);
