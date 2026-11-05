@@ -9,11 +9,28 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 
 function block(p, lang) {
   const doc = buildPolicy(p, lang);
-  const body = doc.sections.map((s) =>
-    `<h2>${esc(s.h)}</h2>` +
-    (s.items ? `<ul>${s.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : s.text ? `<p>${esc(s.text)}</p>` : "") +
-    (s.mail ? `<p><a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a></p>` : "")
-  ).join("");
+  const body =
+    (doc.intro ? `<p>${esc(doc.intro)}</p>` : "") +
+    (doc.notice ? `<p class="note">${esc(doc.notice)}</p>` : "") +
+    doc.sections
+      .map((s) => {
+        const head = `<h2>${esc(s.h)}</h2>`;
+        const body = s.paragraphs
+          ? s.paragraphs.map((t) => `<p>${esc(t)}</p>`).join("")
+          : s.items
+            ? `<ul>${s.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>`
+            : s.text
+              ? `<p>${esc(s.text)}</p>`
+              : "";
+        const links = (s.links || [])
+          .map((l) => `<p><a href="${esc(l.u)}" rel="noopener">${esc(l.t)}</a></p>`)
+          .join("");
+        const mail = s.mail
+          ? `<p><a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a></p>`
+          : "";
+        return head + body + links + mail;
+      })
+      .join("");
   return `<article id="${lang}" lang="${lang}" dir="${DIR[lang]}"><h1>${esc(doc.title)}</h1><p>${esc(doc.meta)}</p>${body}</article>`;
 }
 
@@ -22,7 +39,7 @@ function page(p) {
   const nav = Object.keys(NAMES).map((l) => `<a href="#${l}" lang="${l}">${NAMES[l]}</a>`).join(" · ");
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(p.n)} — Privacy Policy</title>
-<style>body{font:16px/1.7 system-ui,"Noto Sans SC","Segoe UI",Tahoma,sans-serif;max-width:760px;margin:0 auto;padding:20px;color:#15211f}nav{padding:10px 0;border-bottom:1px solid #ddd}article{padding:16px 0 32px;border-bottom:1px solid #ddd}h1{font-size:26px}h2{font-size:18px;margin-top:22px}a{color:#0a6b5f}</style>
+<style>body{font:16px/1.7 system-ui,"Noto Sans SC","Segoe UI",Tahoma,sans-serif;max-width:760px;margin:0 auto;padding:20px;color:#15211f}nav{padding:10px 0;border-bottom:1px solid #ddd}article{padding:16px 0 32px;border-bottom:1px solid #ddd}h1{font-size:26px}h2{font-size:18px;margin-top:22px}a{color:#0a6b5f} .note{background:#fff8e1;border-inline-start:4px solid #f0ad4e;padding:10px 14px;border-radius:6px}</style>
 </head><body><nav>${nav}</nav>${Object.keys(NAMES).map((l) => block(p, l)).join("")}</body></html>`;
 }
 
